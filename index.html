@@ -9,6 +9,7 @@
     <title>knitting ipsum</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/main.css">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 </head>
@@ -17,8 +18,31 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <div id="container">
+    <header>
+      <h1>knitting ipsum</h1>
+    </header>
+
+    <section id="form">
+      <h2>get some ipsum:</h2>
+
+      <form id="ipsum">
+        <input type="number" value="1" name="paragraphs" id="paragraphs">
+        <label for="paragraphs">paragraphs</label>
+        <br>
+        <input type="submit" value="get it!" id="generate">
+      </form>
+
+      <aside class="footer">
+        <p><a href="https://github.com/ArtCraftCode/knitting-ipsum" target="_blank">Built</a> by <a href="https://twitter.com/feministy" target="_blank">Liz Abinante</a>.</p>
+      </aside>
+    </section>
+
+    <section id="generated">
+      <!-- placeholder! -->
+    </section>
+
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="app.js"></script>
