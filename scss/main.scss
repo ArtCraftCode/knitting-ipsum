@@ -4,3 +4,59 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+$fonts: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$base-font-size: 1.35rem;
+
+body {
+  font-size: $base-font-size;
+  line-height: 1.75rem;
+  font-family: $fonts;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.25rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+aside.footer {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+input[type="number"] {
+  width: 50px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+}
+
+input[type="number"], input[type="submit"] {
+  font-family: $fonts;
+  font-size: $base-font-size;
+  padding: 5px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border: solid 5px #969696;
+}
+
+input[type="submit"]:hover {
+  // do a thing
+}
