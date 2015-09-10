@@ -60,3 +60,10 @@ input[type="number"]:focus {
 input[type="submit"]:hover {
   // do a thing
 }
+
+p {
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
