@@ -60,6 +60,7 @@ $(document).ready(function() {
     $('#generated').html('');
     var number = $('#paragraphs').val();
     var paras = paragraphs(number);
+    $('.svg').hide();
     $('#generated').append(format(paras));
   });
 });
