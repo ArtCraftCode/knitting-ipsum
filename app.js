@@ -57,10 +57,12 @@ $(document).ready(function() {
   // listen for clicks and do stuff
   $('#ipsum').submit(function(event) {
     event.preventDefault();
+    $('#generated').hide();
     $('#generated').html('');
     var number = $('#paragraphs').val();
     var paras = paragraphs(number);
     $('.svg').hide();
+    $('#generated').show();
     $('#generated').append(format(paras));
   });
 });
