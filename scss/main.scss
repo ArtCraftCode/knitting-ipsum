@@ -1,17 +1,35 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 
 $fonts: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$base-font-size: 1.35rem;
+$base-font-size: 1.25rem;
+
+$header-fonts: "brandon-grotesque", $fonts;
+
+$colors: (
+  'white': #FFFEFC,
+  'light_gray': #E2E3DF,
+  'middle_gray': #515B5E,
+  'dark_gray': #2E3233,
+  'accent': #FF2B43
+);
 
 body {
   font-size: $base-font-size;
-  line-height: 1.75rem;
+  line-height: 1.5rem;
   font-family: $fonts;
+  color: map-get($colors, 'light_gray');
+  background-color: map-get($colors, 'dark_gray');
+  font-family: $header-fonts;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+a {
+  color: map-get($colors, 'middle_gray');
+  &:hover {
+    color: map-get($colors, 'accent');
+    text-decoration: none;
+  }
 }
 
 #container {
@@ -20,32 +38,53 @@ body {
   padding: 5%;
 }
 
+header, #generator, #generated {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#generated {
+  max-width: 600px;
+  text-align: justify;
+  text-transform: none;
+  font-family: $fonts;
+  padding: 5% 0;
+}
+
+h1, h2 {
+  font-weight: 900;
+}
+
 h1 {
-  font-weight: 700;
-  font-size: 4rem;
-  line-height: 4.25rem;
+  font-size: 6rem;
+  line-height: 6.25rem;
+  color: map-get($colors, 'accent');
 }
 
 h2 {
-  font-size: 2.5rem;
-  line-height: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 4rem;
 }
 
-aside.footer {
+
+.footer {
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
 input[type="number"] {
-  width: 50px;
-  border: solid 5px #c9c9c9;
+  width: 40px;
+  border: none;
+  border-bottom: solid 5px map-get($colors, 'light_gray');
   transition: border 0.3s;
+  background-color: map-get($colors, 'dark_gray');
+  color: map-get($colors, 'accent');
 }
 
 input[type="number"], input[type="submit"] {
-  font-family: $fonts;
+  font-family: $header-fonts;
   font-size: $base-font-size;
+  text-transform: uppercase;
   padding: 5px;
   appearance: none;
   box-shadow: none;
@@ -54,9 +93,33 @@ input[type="number"], input[type="submit"] {
 
 input[type="number"]:focus {
   outline: none;
-  border: solid 5px #969696;
+  border-bottom: solid 5px map-get($colors, 'accent');
 }
 
-input[type="submit"]:hover {
-  // do a thing
+input[type="submit"] {
+  background-color: map-get($colors, 'accent');
+  color: map-get($colors, 'light_gray');
+  outline: none;
+  border: none;
+  &:hover {
+    color: map-get($colors, 'accent');
+    background-color: map-get($colors, 'light_gray');
+  }
+}
+
+p {
+  font-family: $fonts;
+  line-height: $base-font-size * 1.5;
+  font-weight: 400;
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+svg {
+  width: 350px;
+  path {
+    fill: map-get($colors, 'accent');
+  }
 }
