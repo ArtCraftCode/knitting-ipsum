@@ -1,12 +1,15 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 
 $fonts: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $base-font-size: 1.35rem;
+
+$colors: (
+  'white': #FFFEFC,
+  'light_gray': #E2E3DF,
+  'middle_gray': #515B5E,
+  'dark_gray': #2E3233,
+  'lime': #CAF200
+);
 
 body {
   font-size: $base-font-size;
